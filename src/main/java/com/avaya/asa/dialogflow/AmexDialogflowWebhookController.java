@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AmexDialogflowWebhookController {
-   Logger logger = LoggerFactory.getLogger(AmexDialogflowWebhookController.class);
-   private DialogFlowFulfillmentService ddService;
+    Logger logger = LoggerFactory.getLogger(AmexDialogflowWebhookController.class);
+    private DialogFlowFulfillmentService ddService;
 
-   @Autowired
-   public AmexDialogflowWebhookController(DialogFlowFulfillmentService ddService) {
-      this.ddService = ddService;
-   }
+    @Autowired
+    public AmexDialogflowWebhookController(DialogFlowFulfillmentService ddService) {
+        this.ddService = ddService;
+    }
 
-   @PostMapping({"/webhook"})
-   public DialogFlowResponse webhook(@RequestBody DialogFlowRequest request) {
-      return this.ddService.handleRequest(request);
-   }
+    @PostMapping({"/webhook"})
+    public DialogFlowResponse webhook(@RequestBody DialogFlowRequest request) {
+        return this.ddService.handleRequest(request);
+    }
 }

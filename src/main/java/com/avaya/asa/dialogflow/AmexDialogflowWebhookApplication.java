@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AmexDialogflowWebhookApplication {
-   public static void main(String[] args) {
-      SpringApplication.run(AmexDialogflowWebhookApplication.class, args);
-   }
+    public static void main(String[] args) {
+        SpringApplication.run(AmexDialogflowWebhookApplication.class, args);
+    }
 }
