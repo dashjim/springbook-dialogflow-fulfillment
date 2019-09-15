@@ -27,7 +27,7 @@ public class QueryResult {
    @JsonProperty("parameters")
    private Parameters parameters;
    @JsonProperty("outputContexts")
-   private List outputContexts = null;
+   private List<OutputContext> outputContexts = null;
    @JsonProperty("intent")
    private Intent intent;
    @JsonProperty("fulfillmentMessages")
@@ -100,12 +100,12 @@ public class QueryResult {
    }
 
    @JsonProperty("outputContexts")
-   public List getOutputContexts() {
+   public List<OutputContext> getOutputContexts() {
       return this.outputContexts;
    }
 
    @JsonProperty("outputContexts")
-   public void setOutputContexts(List outputContexts) {
+   public void setOutputContexts(List<OutputContext> outputContexts) {
       this.outputContexts = outputContexts;
    }
 

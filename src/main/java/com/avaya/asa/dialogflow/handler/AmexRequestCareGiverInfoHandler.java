@@ -17,7 +17,7 @@ public class AmexRequestCareGiverInfoHandler implements DDHandler {
     }
 
     public DialogFlowResponse handle(DialogFlowRequest request) {
-        String caregiver = HandlerHelper.getEntity(request, "CAREGIVER");
+        String caregiver = HandlerHelper.getDirectEntity(request, "CAREGIVER");
         log.info(String.format("carevier entity is: %s", caregiver));
         return HandlerHelper.createNewDDResponseForAnswer("As the primary care giver, you can take 14 weeks of paid leave, " +
                 "secondary care givers can obtain up to 4 weeks of paid leave. Approved parental paid leave may be taken " +
