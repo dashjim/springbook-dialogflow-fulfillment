@@ -14,6 +14,7 @@ public class DialogFlowHandlerReactor {
     public DialogFlowHandlerReactor() {
         this.addHandler(new AmexRequestCareGiverInfoHandler());
         this.addHandler(new AmexParentalLeaveNotSatisfiedHandler());
+        this.addHandler(new AmexParentalLeavePollResult());
     }
 
     private void addHandler(DDHandler newHandler) {
